@@ -6,4 +6,4 @@ class Book(models.Model):
     author = models.CharField(max_length=100)
 
     class Meta:
-        index_together = ["name", "author"]
+        indexes = [models.Index(fields=["name", "author"])]
